@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+
+@theme {
+  --color-paper: #f7f5ef;
+  --color-surface: #ffffff;
+  --color-surface-2: #efece3;
+  --color-ink: #15201b;
+  --color-ink-soft: #4e5a53;
+  --color-ink-faint: #626c66;
+  --color-line: #ddd8cb;
+  --color-line-strong: #c9c2b2;
+  --color-brand: #175c46;
+  --color-brand-strong: #0e4433;
+  --color-brand-tint: #e3ede7;
+  --color-signal: #d98a2b;
+  --color-signal-bright: #e9a85c;
+  --color-signal-tint: #f7e7cf;
+  --color-signal-ink: #7a4a12;
+  --color-success: #1f7a5c;
+  --color-warning: #b7791f;
+  --color-danger: #b42318;
+  --color-on-brand: #ffffff;
+  --color-on-dark-soft: #b9cfc3;
+  --color-on-dark-faint: #9fb8aa;
+  --color-footer-soft: #b9b5a9;
+  --color-focus: #175c46;
+  --color-field-line: #8a8375;
+
+  --font-merriweather: var(--font-merriweather-face), Merriweather, Georgia, 'Times New Roman', serif;
+  --font-manrope: var(--font-manrope-face), Manrope, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Site defaults: Merriweather everywhere; Manrope is reserved for the hero heading. */
+  --font-sans: var(--font-merriweather);
+  --font-serif: var(--font-merriweather);
+  --font-heading: var(--font-manrope);
+  --font-display: var(--font-merriweather);
+  --font-mkt: var(--font-merriweather);
+
+  --font-mono-mkt: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --shadow-preview: 0 24px 60px -30px rgba(21, 32, 27, 0.26);
+
+  /* Primary button bevel: top inner light, 1px inner outline, bottom inner shade + brand ambient glow */
+  --shadow-btn-primary:
+    inset 0 1px 0 rgb(255 255 255 / 0.18), inset 0 0 0 1px rgb(255 255 255 / 0.08),
+    inset 0 -1px 0 rgb(10 10 8 / 0.16), 0 1px 2px rgb(10 10 8 / 0.14), 0 5px 14px -6px rgb(23 92 70 / 0.45);
+  --shadow-btn-primary-hover:
+    inset 0 1px 0 rgb(255 255 255 / 0.24), inset 0 0 0 1px rgb(255 255 255 / 0.11),
+    inset 0 -1px 0 rgb(10 10 8 / 0.16), 0 2px 4px rgb(10 10 8 / 0.15), 0 8px 20px -6px rgb(23 92 70 / 0.55);
+  --shadow-btn-primary-active: inset 0 2px 5px rgb(10 10 8 / 0.3), inset 0 0 0 1px rgb(255 255 255 / 0.06),
+    inset 0 1px 0 rgb(10 10 8 / 0.18);
+}
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+  }
+}
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  color:#302925
+}
+
+@theme {
+  --color-primary: #058b6d;
+  --color-background: #F2F1E7;
+  --color-neutral: #302925;
+
+  --radius-card: 1rem;
+  --radius-paper: 0.25rem;
+  --shadow-soft: 0 18px 44px -28px rgb(10 10 8 / 0.08);
+}
+
+
+@theme {
+  /* Fluid hero type: fits "Turn glances into" on a 320px screen and caps at 88px. */
+  --text-hero: clamp(2rem, 1rem + 5.25vw, 5.5rem);
+  --text-hero--line-height: 1.05;
+  --text-hero--letter-spacing: -0.03em;
+  --text-hero--font-weight: 600;
+
+  /* Fluid value heading: same rhythm as hero, sized for the section's half-width column. */
+  --text-value: clamp(2rem, 1.1rem + 3.9vw, 4.75rem);
+  --text-value--line-height: 1.05;
+  --text-value--letter-spacing: -0.03em;
+  --text-value--font-weight: 600;
+
+
+
+  --radius-tile: 1.25rem;
+
+  --shadow-artifact: 0 0 0 1px rgb(4 23 43 / 0.05), 0 20px 25px -5px rgb(10 10 8 / 0.1),
+    0 8px 10px -6px rgb(10 10 8 / 0.1);
+
+
+}
+
+
+
+
+
+:root {
+  color-scheme: light;
+
+  --cursor-halo: #ffffff;
+  --glow-a: rgb(5 139 109 / 0.26);
+  --glow-b: rgb(5 139 109 / 0.15);
+  --soft-shader:
+    radial-gradient(72rem 36rem at 50% -12%, var(--glow-a), transparent 70%),
+    radial-gradient(40rem 30rem at 108% 40%, var(--glow-b), transparent 70%),
+    radial-gradient(44rem 30rem at -8% 84%, var(--glow-b), transparent 70%),
+    linear-gradient(180deg, var(--color-white) 0%, var(--color-background) 42%, var(--color-background) 100%);
+
+}

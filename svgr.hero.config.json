@@ -1,0 +1,10 @@
+{
+  "typescript": true,
+  "jsxRuntime": "automatic",
+  "dimensions": false,
+  "expandProps": "end",
+  "svgo": true,
+  "svgoConfig": {
+    "plugins": ["removeDimensions", "prefixIds"]
+  }
+}
